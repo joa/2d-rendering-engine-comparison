@@ -30,7 +30,7 @@
     
     CCSprite *sprite = [CCSprite spriteWithImageNamed:@"Spaceship.png"];
     sprite.position = CGPointMake(arc4random_uniform(self.contentSize.width), arc4random_uniform(self.contentSize.height));
-	sprite.scale = 0.25 / self.contentSize.width * self.contentSize.width;
+	sprite.scale = 0.25 / (1024 / self.contentSize.width);
 
     CCActionRotateBy *action = [CCActionRotateBy actionWithDuration:.01 angle:M_PI*2];
     [sprite runAction:[CCActionRepeatForever actionWithAction:action]];

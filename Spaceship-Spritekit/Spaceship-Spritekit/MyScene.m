@@ -29,7 +29,7 @@
     
     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
     sprite.position = CGPointMake(arc4random_uniform(self.size.width), arc4random_uniform(self.size.height));
-    sprite.scale = 0.25 / self.size.width * self.size.width;
+    sprite.scale = 0.25 / (1024 / self.size.width);
 	
     SKAction *action = [SKAction rotateByAngle:M_PI * 2 duration:1];
     [sprite runAction:[SKAction repeatActionForever:action]];
