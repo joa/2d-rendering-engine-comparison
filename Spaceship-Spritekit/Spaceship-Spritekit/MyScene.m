@@ -8,10 +8,10 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-		_limit = 350;
+		_limit = 500;
         _tick = 0;
+        self.scaleMode = SKSceneScaleModeAspectFill;
     }
     return self;
 }
@@ -29,7 +29,7 @@
     
     SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
     sprite.position = CGPointMake(arc4random_uniform(self.size.width), arc4random_uniform(self.size.height));
-    sprite.scale = 0.25 / 568 * self.size.width;
+    sprite.scale = 0.25 / self.size.width * self.size.width;
 	
     SKAction *action = [SKAction rotateByAngle:M_PI * 2 duration:1];
     [sprite runAction:[SKAction repeatActionForever:action]];
