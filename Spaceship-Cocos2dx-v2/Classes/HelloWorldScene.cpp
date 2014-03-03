@@ -49,8 +49,13 @@ void HelloWorld::doStuff(void)
     
     CCSize visibleSize = CCDirector::sharedDirector()->getVisibleSize();
     
+    CCSize frameSize = CCEGLView::sharedOpenGLView()->getFrameSize();
+    
+    float scaleFactor = frameSize.width >= 1024 ? .5 : .25;
+    
     sprite->setPosition(ccp(arc4random_uniform(visibleSize.width), arc4random_uniform(visibleSize.height)));
-    sprite->setScale(0.5 / (1024 / visibleSize.width));
+    
+    sprite->setScale(scaleFactor);
     
     CCRotateBy *action = CCRotateBy::create(.01, M_PI);
     
