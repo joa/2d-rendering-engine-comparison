@@ -1,0 +1,17 @@
+{
+  "name": "Spaceship-defrac",
+  "package": "com.SpaceshipDefrac",
+  "identifier": "SpaceshipDefrac",
+  "main": "foo.bar.HelloWorldApp",
+  "version": "1.0",
+  "targets": [
+    "android",
+    "web",
+    "jvm"
+  ],
+  "debug": false,
+  "web": {
+    "debug": "false",
+    "strictMode": "false"
+  }
+}

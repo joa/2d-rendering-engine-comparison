@@ -1,6 +1,11 @@
 # OS X
 .DS_Store
 
+#defrac
+.idea/
+target/
+bin/
+
 # Xcode
 build/
 *.pbxuser
