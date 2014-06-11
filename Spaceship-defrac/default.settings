@@ -7,11 +7,17 @@
   "targets": [
     "android",
     "web",
-    "jvm"
+    "jvm",
+    "ios",
   ],
   "debug": false,
   "web": {
-    "debug": "false",
     "strictMode": "false"
+  },
+  "ios": { 
+    "deploy": "device"
+  },
+  "android": {
+    "deploy": "device"
   }
 }
